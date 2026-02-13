@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter (0-10 Limit)</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:100px;">
+
+    <h2>Counter (0 - 10)</h2>
+    <h1 id="count">0</h1>
+
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+    <button onclick="resetCounter()">Reset</button>
+
+    <script>
+        var count = 0;
+
+        function increase() {
+            if (count < 10) {
+                count++;
+                document.getElementById("count").innerHTML = count;
+            }
+        }
+
+        function decrease() {
+            if (count > 0) {
+                count--;
+                document.getElementById("count").innerHTML = count;
+            }
+        }
+
+        function resetCounter() {
+            count = 0;
+            document.getElementById("count").innerHTML = count;
+        }
+    </script>
+
+</body>
+</html>
